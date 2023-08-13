@@ -1,0 +1,49 @@
+{% extends 'file_exchanger/base.html' %}
+
+{% load static %}
+{% load sass_tags %}
+
+
+
+{% block head%}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mouse uploads</title>
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" ></script>
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+{% endblock %}
+
+
+
+
+
+{% block content%}
+
+<div id="dropzone-div">
+  <form action='/' class = "dropzone" id = "image-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="dropzone-previews"></div>
+    <div class="fallback">
+        {{ form }}
+    </div>
+
+
+  </form>
+
+
+
+</div>
+<nav style="padding:16px" class="navbar bg-body justify-content-center sticky-bottom">
+      <button class="btn btn-primary btn-lg" id ="upload">Upload</button>
+</nav>
+<script src="{% static 'file_exchanger/js/index.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+
+

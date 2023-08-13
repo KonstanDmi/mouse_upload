@@ -1,0 +1,25 @@
+{% extends 'file_exchanger/base.html' %}
+{% load static %}
+
+{% block head%}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mouse oops!</title>
+    <link href="{% static 'file_exchanger/css/oops.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,100,300" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content%}
+
+<div class="cont_principal">
+<div class="cont_error">
+
+<h1>Oops</h1>
+  <p>The Page you're looking for isn't here.</p>
+  </div>
+<div class="cont_aura_1"></div>
+<div class="cont_aura_2"></div>
+</div>
+
+<script src="{% static 'file_exchanger/js/oops.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,30 @@
+#countdown {
+	font-family: sans-serif;
+	color: #0099cf;
+	display: inline-block;
+	font-weight: 300;
+	font-size: 32px;
+  text-align: center;
+}
+
+#countdown > div{
+	padding: 0 10px 0;
+  display: inline-block;
+  border-right: 1px solid #ddf1ff;
+}
+
+#countdown > div:last-of-type{
+  border-right: none;
+}
+
+#countdown div > span{
+	padding: 0 10px 0;
+	display: inline-block;
+}
+
+#countdown div > .label{
+	padding-top: 5px;
+	font-size: 12px;
+  color: #cdcdcd;
+  text-transform: uppercase;
+}
