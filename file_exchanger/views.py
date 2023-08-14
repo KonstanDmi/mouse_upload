@@ -18,11 +18,6 @@ from pydrive2.auth import GoogleAuth
 
 GoogleAuth.DEFAULT_SETTINGS['client_config_file'] = f'{settings.BASE_DIR}\\client_secrets.json'
 gauth = GoogleAuth()
-gauth.LoadCredentialsFile("mycreds.txt")
-
-gauth.Auth('4/0Adeu5BXkEz-uOQX2TQu5sGAqEUJhRLOhRN7OlXADBHqg_Z3fSX_yRAnC1QGMe384Kbdggw&scope=https://www.googleapis.com/auth/drive')
-
-gauth.SaveCredentialsFile("mycreds.txt")
 drive = GoogleDrive(gauth)
 
 # Create your views here.
