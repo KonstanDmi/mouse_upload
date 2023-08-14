@@ -18,7 +18,20 @@ from pydrive2.auth import GoogleAuth
 
 GoogleAuth.DEFAULT_SETTINGS['client_config_file'] = f'{settings.BASE_DIR}/client_secrets.json'
 gauth = GoogleAuth()
-gauth.LocalWebserverAuth()
+
+gauth.LoadCredentialsFile("mycreds.txt")
+if not gauth.credentials:
+    print('wtf')
+    gauth.LocalWebserverAuth()
+elif gauth.access_token_expired:
+    try:
+        gauth.Refresh()
+    except Exception as e:
+        gauth.Authorize()
+else:
+    gauth.Authorize()
+
+gauth.SaveCredentialsFile("mycreds.txt")
 drive = GoogleDrive(gauth)
 
 # Create your views here.
