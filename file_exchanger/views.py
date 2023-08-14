@@ -16,7 +16,7 @@ import asyncio
 from pydrive2.drive import GoogleDrive
 from pydrive2.auth import GoogleAuth
 
-GoogleAuth.DEFAULT_SETTINGS['client_config_file'] = f'{settings.BASE_DIR}\\client_secrets.json'
+GoogleAuth.DEFAULT_SETTINGS['client_config_file'] = f'{settings.BASE_DIR}/client_secrets.json'
 gauth = GoogleAuth()
 drive = GoogleDrive(gauth)
 
