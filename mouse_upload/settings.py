@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['kylebr.pythonanywhere.com']
 
-
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 # Application definition
 
 INSTALLED_APPS = [
