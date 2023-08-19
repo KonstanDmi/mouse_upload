@@ -10,3 +10,5 @@ consists of three pages
 
 it works fine with jpeg/png images but does not show tif or other raw photos in preview
 also cannot play video yet 
+
+deployed a halfworking version on http://kylebr.pythonanywhere.com
